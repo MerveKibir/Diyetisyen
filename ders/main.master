@@ -1,0 +1,240 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="main.master.cs" Inherits="main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>DİYETİSYEN</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-grid.min.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <link href="/StyleSheet.css" rel="stylesheet" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+
+        $("document").ready(function () {
+            $("header nav ul li.konular-wrap").mouseover(function () {
+                $("header nav ul li.konular-wrap .konular").css("display", "block")
+            })
+            $("header nav ul li.konular-wrap").mouseleave(function () {
+                $("header nav ul li.konular-wrap .konular").css("display", "none")
+            })
+        })
+        $("document").ready(function () {
+            $("header nav ul li.konular-wrap .hesaplama-wrap").mouseover(function () {
+                $("header nav ul li.konular-wrap .konular .hesaplama-wrap .hesaplama").css("display", "block")
+            })
+            $("header nav ul li.konular-wrap .konular .hesaplama-wrap .hesaplama").mouseleave(function () {
+                $("header nav ul li.konular-wrap .konular .hesaplama-wrap .hesaplama").css("display", "none")
+            })
+        })
+        
+
+    </script> 
+  
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+    <style type="text/css">
+        .auto-style1 {
+            margin-left: 5px;
+        }
+
+        .auto-style2 {
+            display: block;
+            width: 145px;
+            height: 37px;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-clip: padding-box;
+            border-radius: .25rem;
+            transition: none;
+            border: 1px solid #ced4da;
+            background-color: #fff;
+            margin-left: 18px;
+        }
+    </style>
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div id="wrapper">
+
+            <header>
+                <div class="logo">
+                    <img src="resimler/bazal_icon.png" width="30" height="45" />
+                </div>
+                <nav class="maddeler navbar navbar-expand-lg navbar-light bg-light ">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="/">ANASAYFA </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="randevu.aspx">RANDEVU</a>
+                            </li>
+                            <li class="konular-wrap nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">KONULAR
+                                </a>
+                                <div class="konular dropdown-menu" aria-labelledby="navbarDropdown" style="width: auto; height: auto; margin: 5px auto;">
+                                    <ul>
+                                        <a class="dropdown-item" href="diyetprogramlari.aspx">Diyet Programları</a>
+                                        <li class="hesaplamalar-wrap nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hesaplamalar
+                                            </a>
+                                            <div class="hesaplamalar  dropdown-menu-right " aria-labelledby="navbarDropdown ">
+                                                <ul>
+                                                    <li class="bmi-wrap"><a class="dropdown-item dropright" href="bmihesaplama.aspx">BMI Hesaplama</a></li>
+                                                    <li class="ideal-wrap"><a class="dropdown-item dropright" href="idealkilohesaplama.aspx">İdeal Kilo Hesaplama</a></li>
+                                                    <li class="bazal-wrap"><a class=" dropdown-item dropright" href="bazalmetabolizmahesaplama.aspx">Bazal Metabolizma Hesaplama</a></li>
+                                                </ul>
+                                            </div>
+                                            <a class="dropdown-item" href="tarifler.aspx">Tarifler</a>
+                                            <a class="dropdown-item" href="makaleler.aspx">Makaleler</a>
+                                            <a class="dropdown-item" href="basarihikayeleri.aspx">Başarı Hikayeleri</a></li>
+                                    </ul>
+                                </div>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="hakkimda.aspx">HAKKIMDA</a>
+                                </li>
+
+                            </li>
+
+                            <a class="nav-link" href="hakkimda.aspx"></a>
+                        </ul>
+
+
+                    </div>
+                </nav>
+                <input class="auto-style2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success " type="submit" style="width: 49px; margin-left: 160px; background-color: dimgray; color: white; margin-top: -60px; height: 34px;">ARA</button>
+
+            </header>
+
+            <div class="banner">
+                &nbsp HOŞGELDİNİZ
+                 <br />
+                &nbsp &nbsp  "Kendine bir    
+                <br />
+                &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp iyilik yap..."
+                
+            </div>
+
+            <div class="sol-taraf">
+                <div class="hizli-kayit">
+                    <asp:Panel ID="pnlgiris" runat="server">
+                        <div class="ust">
+                            KULLANICI GİRİŞİ
+                        </div>
+
+                        <div class="alt" style="height: 234px">
+                            <div class="kullanici">
+                                <span>EPosta</span>
+                                <asp:TextBox ID="eposta" CssClass="textbox" runat="server" />
+                            </div>
+                            <div class="sifre">
+                                <span>Şifre</span>
+                                <asp:TextBox ID="txtsifre" CssClass="textbox" runat="server" TextMode="Password" />
+                            </div>
+                            <asp:CheckBox ID="CheckBox1" Text="ADMİN" runat="server" />
+                            <a href="kayit.aspx" class="btnkayit">Kayıt Ol</a>
+                            <asp:Button ID="btngiris"  CssClass="btngiris btn btn-success btn-lg " Text="Giriş" runat="server" OnClick="btngiris_Click"/>
+
+                            <br />
+                            <asp:Label ID="lblsonuc" Text="" runat="server" />
+                            <br />
+                        </div>
+                    </asp:Panel>
+                    <asp:Panel ID="pnlkullanici" runat="server" CssClass="pnlkullanici">
+                        Hoşgeldiniz,
+                        <asp:Label ID="lblkullaniciadi" Text="" runat="server" />
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        <asp:Button ID="btncikis" Text="Çıkış" runat="server" OnClick="btncikis_Click" CssClass="kullanicicikisi btn btn-danger btn-group-sm" />
+                        <br />
+                        <br />
+                        <br />
+                    </asp:Panel>
+                </div>
+
+                <div class="duyurular">
+                    <div class="ust">
+                        DUYURULAR
+                    </div>
+
+                    <div class="alt">
+                        <asp:ListView ID="lstDuyuru" runat="server">
+                            <ItemTemplate>
+                                <div class="duyuru-wrap">
+                                    <asp:Label Text='<%#Eval("Baslik") %>' ForeColor="ForestGreen" runat="server" />
+                                    <br />
+                                    <asp:Label Text='<%#Eval("Duyuru") %>' runat="server" />
+                                    <br />
+                                    <asp:Label Text='<%#Eval("Tarih") %>' runat="server" />
+                                </div>
+                            </ItemTemplate>
+                        </asp:ListView>
+
+                    </div>
+                </div>
+            </div>
+            <div class="içerik">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="iletisim">
+                &nbsp;
+                <ul class="iletisimbilgileri" style="margin: 10px auto; text-align: center; width: 740px; height: 349px;">
+                    <li class="auto-style1" style="margin: 10px auto; text-align: center;">&nbsp;<a name="Yer"></a><a style="color: #023402; font-size: medium; color: darkred;">Adres:</a> Pelitözü Mah. Fatih Sultan Mehmet Bulvarı No:27 11230 Merkez/BİLECİK
+                        <br />
+                        <a style="color: #023402; font-size: large; color: darkred;">Telefon:</a> 0228 214 11 11
+                        <br />
+                        <a style="color: #023402; font-size: large; color: darkred;">E-tebligat:</a> 35476-96741-22941
+                        <br />
+                        <a style="color: #023402; font-size: large; color: darkred;">Fax:</a> 0228 214 10 17
+                        <br />
+                        <a style="color: #023402; font-size: large; color: darkred;">E-Posta:</a> genelsekreterlik@bilecik.edu.tr
+                        <br />
+                        <a style="color: #023402; font-size: large; color: darkred;">KEP:</a> bseu@hs01.kep.tr
+                        <br />
+                        <br />
+                    </li>
+                    <li>
+                        <a target="blank" style="padding-left: 10px; padding-top: 10px;" href="https://www.facebook.com/bseuniversitesi">
+                            <img id="icon" src="resimler/face.png" alt="Facebook"></a>
+                        <a target="blank" style="padding-left: 10px; padding-top: 10px;" href="https://twitter.com/bseuniversitesi">
+                            <img src="resimler/twit.png" alt="Twitter"></a>
+                        <a target="blank" style="padding-left: 10px; padding-top: 10px;" href="https://www.youtube.com/channel/UCGuXQmVu7KWA13P_YAbWraQ">
+                            <img src="resimler/youtube.png" alt="YouTube"></a>
+                        <a target="blank" style="padding-left: 10px; padding-top: 10px;" href="https://www.instagram.com/bseuniversitesi/">
+                            <img src="resimler/inst.png" alt="İnstagram"></a>
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+
+            <footer>
+                BİLGİSAYAR MÜHENDİSLİĞİ TASARIM ÇALISMASI I
+            </footer>
+        </div>
+
+
+
+
+
+
+    </form>
+</body>
+</html>

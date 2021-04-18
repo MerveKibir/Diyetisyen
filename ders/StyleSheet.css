@@ -1,0 +1,304 @@
+﻿body {
+    background-color: #d5d5d5;
+    font-family: 'Trebuchet MS' 'Brush Script MT' Arial
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    color: forestgreen;
+}
+
+    a:hover {
+        color: mediumseagreen;
+    }
+
+
+#wrapper {
+    width: 960px;
+    height: auto;
+    margin: 0 auto;
+}
+
+header {
+    float: left;
+    width: 100%;
+    height: 45px;
+    background-color: forestgreen;
+    border: 2px solid forestgreen;
+}
+
+    header .logo {
+        float: left;
+        width: 60px;
+        height: 45px;
+        margin-left: 30px;
+    }
+
+
+    header nav {
+        float: left;
+        width: 620px;
+        height: 41px;
+        background-color: ghostwhite;
+        line-height: 41px;
+    }
+
+        header nav.maddeler ul {
+            list-style: none;
+        }
+
+            header nav.maddeler ul li {
+                float: left;
+                margin-left: 30px;
+                font-family: Elephant;
+                color: forestgreen;
+                cursor: default;
+            }
+
+                header nav.maddeler ul li.konular-wrap {
+                    position: relative;
+                }
+
+                    header nav.maddeler ul li.konular-wrap .konular {
+                        float: left;
+                        display: none;
+                        position: absolute;
+                        margin-left: 10px;
+                        width: 200px;
+                        height: auto;
+                        background-color: ghostwhite;
+                    }
+
+                        header nav.maddeler ul li.konular-wrap .konular .hesaplama-wrap {
+                            position: relative;
+                        }
+
+                            header nav.maddeler ul li.konular-wrap .konular .hesaplama-wrap .hesaplama {
+                                display: none;
+                                margin: -37px 165px;
+                                position: absolute;
+                                width: 285px;
+                                height: auto;
+                                background-color: ghostwhite;
+                            }
+
+    header .arama-wrap {
+        float: left;
+        width: 200px;
+        height: 41px;
+        background-color: forestgreen;
+    }
+
+        header .arama-wrap .txtarama {
+            float: left;
+            width: 150px;
+            height: 21px;
+            background-color: ghostwhite;
+            font-family: Elephant;
+        }
+
+        header .arama-wrap .aramabutonu {
+            float: left;
+            width: 50px;
+            height: 41px;
+            font-family: Elephant;
+            color: ghostwhite;
+            background-color: forestgreen;
+        }
+
+.banner {
+    float: left;
+    margin-top: 45px;
+    width: 956px;
+    height: 196px;
+    color: forestgreen;
+    font-family: Elephant;
+    text-align: left;
+    line-height: unset;
+    font-size: 35px;
+    background-image: url('resimler/banner yeniv.jpg');
+    background-size: cover;
+    border: 2px groove forestgreen;
+}
+
+.sol-taraf {
+    float: left;
+    width: 285px;
+    height: auto;
+    margin-top: 45px;
+}
+
+    .sol-taraf .hizli-kayit {
+        float: left;
+        width: 285px;
+        height: auto;
+        background-color: ghostwhite;
+    }
+
+        .sol-taraf .hizli-kayit .ust {
+            float: left;
+            width: 285px;
+            height: 44px;
+            border-bottom: 1px solid forestgreen;
+            background-color: forestgreen;
+            line-height: 44px;
+            padding-left: 15px;
+            color: ghostwhite;
+            font-family: Elephant;
+        }
+
+        .sol-taraf .hizli-kayit .alt {
+            float: left;
+            width: 250px;
+            height: 185px;
+            padding: 17.5px;
+            border-bottom: 1px solid forestgreen;
+            background-color: ghostwhite;
+        }
+
+            .sol-taraf .hizli-kayit .alt .sifre {
+                margin-top: 15px;
+            }
+
+            .sol-taraf .hizli-kayit .alt .textbox {
+                width: 228px;
+                height: 18px;
+                padding: 10px;
+                border: 1px solid forestgreen;
+            }
+
+            .sol-taraf .hizli-kayit .alt .btnkayit {
+                float: left;
+                width: 100px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                color: forestgreen;
+                background-color: ghostwhite;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+
+            .sol-taraf .hizli-kayit .alt .btngiris {
+                float: right;
+                text-align: center;
+                cursor: pointer;
+                margin-top: 10px;
+            }
+
+                .sol-taraf .hizli-kayit .alt .btngiris:hover {
+                    background-color: limegreen;
+                }
+
+            .sol-taraf .hizli-kayit .alt .btnkayit:hover {
+                background-color: darkgrey;
+            }
+
+.kullanicicikisi {
+    margin-top: 20px;
+}
+    .kullanicicikisi .btncikis {
+        float: right;
+        text-align: center;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+
+
+.pnlkullanici {
+    width: 285px;
+    background-color: ghostwhite;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+.sol-taraf .duyurular {
+    float: left;
+    width: 285px;
+    height: auto;
+    margin-top: 45px;
+}
+
+    .sol-taraf .duyurular .ust {
+        float: left;
+        width: 100%;
+        height: 44px;
+        border-bottom: 1px solid forestgreen;
+        background-color: forestgreen;
+        line-height: 44px;
+        padding-left: 15px;
+        color: ghostwhite;
+        font-family: Elephant;
+    }
+
+    .sol-taraf .duyurular .alt {
+        float: left;
+        width: 285px;
+        height: auto;
+        padding: 17.5px;
+        border-bottom: 1px solid forestgreen;
+        background-color: ghostwhite;
+    }
+
+        .sol-taraf .duyurular .alt .duyuru-wrap {
+            float: left;
+            width: 100%;
+            height: auto;
+            background-color: ghostwhite;
+            margin: 10px 0;
+        }
+
+            .sol-taraf .duyurular .alt .duyuru-wrap:hover {
+                background-color: #d2ffd2;
+            }
+
+
+.içerik {
+    float: right;
+    width: 625px;
+    height: auto;
+    background-color: ghostwhite;
+    margin-top: 45px;
+}
+
+
+
+.iletisim {
+    float: left;
+    width: 960px;
+    height: 360px;
+    text-align: left;
+    border: 10px;
+    border-left: 40px;
+    border-right: 40px;
+    border-style: ridge;
+    border-color: forestgreen;
+    margin-top: 45px;
+    background-color: ghostwhite;
+}
+
+    .iletisim ul.iletisimbilgileri {
+
+        margin:100px 300px;
+        text-align: center;
+        list-style: none;
+    }
+
+footer {
+    float: left;
+    width: 100%;
+    height: 60px;
+    margin-top: 45px;
+    background-color: forestgreen;
+    text-align: center;
+    line-height: 60px;
+}
